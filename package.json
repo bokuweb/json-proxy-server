@@ -1,0 +1,19 @@
+{
+  "name": "json-proxy-server",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/bokuweb/json-proxy-server.git",
+  "author": "bokuweb <bokuweb12@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@sindresorhus/is": "^0.7.0",
+    "chalk": "^2.3.1",
+    "http-proxy": "^1.16.2",
+    "inquirer": "^5.1.0",
+    "json-server": "^0.12.1",
+    "log-level": "^1.1.0",
+    "loglevel": "^1.6.1",
+    "meow": "^4.0.0",
+    "path-match": "^1.2.4"
+  }
+}
