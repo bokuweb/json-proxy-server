@@ -15,5 +15,8 @@
     "loglevel": "^1.6.1",
     "meow": "^4.0.0",
     "path-match": "^1.2.4"
+  },
+  "bin": {
+    "json-proxy-server": "./cli.js"
   }
 }
