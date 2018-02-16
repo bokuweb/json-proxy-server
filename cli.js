@@ -2,6 +2,7 @@
 
 const meow = require('meow');
 const inquirer = require('inquirer');
+const path = require('path');
 const is = require('@sindresorhus/is');
 const start = require('./');
 
@@ -29,10 +30,8 @@ const cli = meow(
   },
 );
 
-console.log(cli.flags.conf)
-
 const confPath = cli.flags.conf ? cli.flags.conf : './json-proxy-server.conf.js';
-const confFnOrPbj = require(confPath);
+const confFnOrPbj = require(path.join(process.cwd(),confPath));
 const conf = is.function(confFnOrPbj) ? confFnOrPbj() : confFnOrPbj;
 
 if (cli.flags.select) {
@@ -63,4 +62,6 @@ if (cli.flags.select) {
 }
 
 start(conf);
+
+
 
